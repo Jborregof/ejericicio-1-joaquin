@@ -24,7 +24,7 @@ function onLoad() {
   createUser();
 
   //Instanciamos la variable result, que será el array que devuelve la funcion filterUsers() sobre el array inicial
-  var result = filterUsers(array);
+  const result = filterUsers(array);
 
   //EXTRA: No lo pide el ejercicio, lo he hecho para verlo mas visual
   mostrarResultadoHtml(result);
@@ -47,13 +47,13 @@ function User(name, country, money, premiumAccount) {
 
 //funcion createUser donde instanciamos los 7 users y los metemos en la variable global array
 function createUser() {
-  var user1 = new User("Usuario1", "Spain", 199, true);
-  var user2 = new User("Usuario2", "France", 0, false);
-  var user3 = new User("Usuario3", "Spain", 537, false);
-  var user4 = new User("Usuario4", "Italy", 1004, true);
-  var user5 = new User("Usuario5", "Spain", 250, false);
-  var user6 = new User("Usuario6", "Italy", 799, true);
-  var user7 = new User("Usuario7", "Spain", 3345, false);
+  const user1 = new User("Usuario1", "Spain", 199, true);
+  const user2 = new User("Usuario2", "France", 0, false);
+  const user3 = new User("Usuario3", "Spain", 537, false);
+  const user4 = new User("Usuario4", "Italy", 1004, true);
+  const user5 = new User("Usuario5", "Spain", 250, false);
+  const user6 = new User("Usuario6", "Italy", 799, true);
+  const user7 = new User("Usuario7", "Spain", 3345, false);
   array.push(user1, user2, user3, user4, user5, user6, user7);
 }
 
