@@ -16,7 +16,7 @@
 // Utilizad constantes siempre que sea posible.
 // Suerte!
 
-window.addEventListener("load", onLoad);
+window.addEventListener('load', onLoad);
 
 //funcion onload que se ejecuta al cargar la pagina
 function onLoad() {
@@ -30,8 +30,8 @@ function onLoad() {
   mostrarResultadoHtml(result);
 
   //Mostrar resultados por consola
-  console.log("El array inicial es: ", array);
-  console.log("El resultado del filtro es ", result);
+  console.log('El array inicial es: ', array);
+  console.log('El resultado del filtro es ', result);
 }
 
 //Definimos la variable global array que será, literalmente, un array
@@ -47,28 +47,28 @@ function User(name, country, money, premiumAccount) {
 
 //funcion createUser donde instanciamos los 7 users y los metemos en la variable global array
 function createUser() {
-  const user1 = new User("Usuario1", "Spain", 199, true);
-  const user2 = new User("Usuario2", "France", 0, false);
-  const user3 = new User("Usuario3", "Spain", 537, false);
-  const user4 = new User("Usuario4", "Italy", 1004, true);
-  const user5 = new User("Usuario5", "Spain", 250, false);
-  const user6 = new User("Usuario6", "Italy", 799, true);
-  const user7 = new User("Usuario7", "Spain", 3345, false);
+  const user1 = new User('Usuario1', 'Spain', 199, true);
+  const user2 = new User('Usuario2', 'France', 0, false);
+  const user3 = new User('Usuario3', 'Spain', 537, false);
+  const user4 = new User('Usuario4', 'Italy', 1004, true);
+  const user5 = new User('Usuario5', 'Spain', 250, false);
+  const user6 = new User('Usuario6', 'Italy', 799, true);
+  const user7 = new User('Usuario7', 'Spain', 3345, false);
   array.push(user1, user2, user3, user4, user5, user6, user7);
 }
 
 //funcion que recibirá por parámetros el array y devolverá el array filtrado.
 function filterUsers(array) {
-  return array.filter(user => user.country == "Spain" && user.money > 200);
+  return array.filter(user => user.country == 'Spain' && user.money > 200);
 }
 
 //EXTRA No lo pide el ejercicio, lo he hecho para verlo mas visual
 function mostrarResultadoHtml(res) {
-  let str = "El resultado del filtro es: ";
+  let str = 'El resultado del filtro es: ';
   res.forEach(function(user) {
-    str += user.name + ", ";
+    str += user.name + ', ';
   });
-  str = str.substring(0, str.length - 2) + ".";
-  document.getElementById("resultado").innerHTML = str;
-  document.getElementById("resultado").style.padding = 15;
+  str = str.substring(0, str.length - 2) + '.';
+  document.getElementById('resultado').textContent = str;
+  document.getElementById('resultado').style.padding = 15;
 }
